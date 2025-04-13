@@ -1,0 +1,115 @@
+body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; background-color: #e0f7ea; color: #1b5e20; }
+
+header { background: linear-gradient(to right, #2e7d32, #0277bd); color: white; padding: 15px 20px; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+
+nav { display: flex; gap: 15px; }
+
+nav a { color: white; text-decoration: none; font-weight: 600; font-size: 1rem; transition: transform 0.2s ease-in-out; }
+
+nav a:hover { transform: scale(1.1); text-decoration: underline; }
+
+.menu-toggle { display: none; flex-direction: column; cursor: pointer; gap: 4px; }
+
+.menu-toggle span { background-color: white; height: 3px; width: 25px; border-radius: 3px; }
+
+section { padding: 100px 20px 60px; text-align: center; min-height: 100vh; }
+
+.home { background-color: #a5d6a7; }
+
+.menu { background-color: #81d4fa; }
+
+.sobre { background-color: #c8e6c9; }
+
+.contato { background-color: #b3e5fc; }
+
+h1, h2 { color: #1b5e20; margin-bottom: 10px; }
+
+p { max-width: 700px; margin: 0 auto 20px auto; font-size: 1.1em; line-height: 1.6; }
+
+.imagem { 
+  width: 60%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.imagem.visivel { opacity: 1; }
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: #2e7d32;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav a:last-child {
+    border-bottom: none;
+  }
+
+  section {
+    padding: 80px 15px;
+    min-height: auto;
+  }
+
+  .imagem {
+    width: 85%;
+    max-width: 300px;
+    margin: 15px auto;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 60px 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+

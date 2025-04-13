@@ -1,1 +1,2 @@
-# Restaurante-do-sapo-2
+# Projeto-de-vida-alura
+Bruno de Lima 3A
